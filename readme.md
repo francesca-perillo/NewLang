@@ -1,5 +1,7 @@
-# 💻 Esercitazione 5
-
+# 💻 Compilatore per **NewLang**
+NewLang è un nuovo linguaggio di programmazione molto basilare, creato con il solo scopo di comprendere la teoria, messa poi in pratica
+dietro lo sviluppo di un compilatore. Sono stati usati vari generatori per l'analisi lessicale e semantica. 
+Il progetto è stato commissionato dal professore dell'Università degli Studi di Salerno **Gennaro Costagliola** e sviluppato dalle studentesse __Esposito Mariarosaria__ e __Perillo Francesca__.
 ```
     ---------------------------------------------------
         
@@ -11,7 +13,7 @@
           
     ---------------------------------------------------
     
-    🧑🏾‍🏫 Gennario Costagliola 
+    🧑🏾‍🏫 Gennaro Costagliola 
     
     ---------------------------------------------------
     
