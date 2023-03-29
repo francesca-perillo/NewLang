@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProgramOp>
+    <DeclList>
+        <VarDeclOp>
+            <VAR/>
+            <AssignStat>
+                <Identifier id="c"/>
+                <ConstOp>
+                    <Type type="integer"/>
+                    <Value value="1"/>
+                </ConstOp>
+            </AssignStat>
+        </VarDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="sommac"/>
+            <ParDeclOp>
+                <out out="out"/>
+                <Type type="string"/>
+                <Identifier id="size"/>
+            </ParDeclOp>
+            <ParDeclOp>
+                <Type type="real"/>
+                <Identifier id="b"/>
+            </ParDeclOp>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="d"/>
+                <Identifier id="a"/>
+            </ParDeclOp>
+            <Type type="real"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="real"/>
+                    <IdInitOp>
+                        <Identifier id="result"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <AssignStat>
+                        <Identifier id="result"/>
+                        <ExprOp>
+                            <Expr typeExpr="PLUS">
+                                <ExprOp>
+                                    <Expr typeExpr="PLUS">
+                                        <ExprOp>
+                                            <Expr typeExpr="PLUS">
+                                                <ExprOp>
+                                                    <Identifier id="a"/>
+                                                </ExprOp>
+                                                <ExprOp>
+                                                    <Identifier id="b"/>
+                                                </ExprOp>
+                                            </Expr>
+                                        </ExprOp>
+                                        <ExprOp>
+                                            <Identifier id="c"/>
+                                        </ExprOp>
+                                    </Expr>
+                                </ExprOp>
+                                <ExprOp>
+                                    <Identifier id="d"/>
+                                </ExprOp>
+                            </Expr>
+                        </ExprOp>
+                    </AssignStat>
+                </Statement>
+                <Statement>
+                    <IfStat>
+                        <ExprOp>
+                            <Expr typeExpr="GT">
+                                <ExprOp>
+                                    <Identifier id="result"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <ConstOp>
+                                        <Type type="integer"/>
+                                        <Value value="100"/>
+                                    </ConstOp>
+                                </ExprOp>
+                            </Expr>
+                        </ExprOp>
+                        <Body>
+                            <VarDeclOp>
+                                <VAR/>
+                                <AssignStat>
+                                    <Identifier id="valore"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="grande"/>
+                                    </ConstOp>
+                                </AssignStat>
+                            </VarDeclOp>
+                            <Statement>
+                                <AssignStat>
+                                    <Identifier id="size"/>
+                                    <ExprOp>
+                                        <Identifier id="valore"/>
+                                    </ExprOp>
+                                </AssignStat>
+                            </Statement>
+                        </Body>
+                        <Body>
+                            <VarDeclOp>
+                                <VAR/>
+                                <AssignStat>
+                                    <Identifier id="valore"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="piccola"/>
+                                    </ConstOp>
+                                </AssignStat>
+                            </VarDeclOp>
+                            <Statement>
+                                <AssignStat>
+                                    <Identifier id="size"/>
+                                    <ExprOp>
+                                        <Identifier id="valore"/>
+                                    </ExprOp>
+                                </AssignStat>
+                            </Statement>
+                        </Body>
+                    </IfStat>
+                </Statement>
+                <ReturnOp>
+                    <ExprOp>
+                        <Identifier id="result"/>
+                    </ExprOp>
+                </ReturnOp>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="stampa"/>
+            <ParDeclOp>
+                <Type type="string"/>
+                <Identifier id="messaggio"/>
+            </ParDeclOp>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <Identifier id="a"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <Identifier id="i"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <ForStat>
+                        <AssignStat>
+                            <Identifier id="x"/>
+                            <ConstOp>
+                                <Type type="integer"/>
+                                <Value value="4"/>
+                            </ConstOp>
+                        </AssignStat>
+                        <ConstOp>
+                            <Type type="integer"/>
+                            <Value value="1"/>
+                        </ConstOp>
+                        <Body>
+                            <Statement>
+                                <WriteStat>
+                                    <WriteMode mode="writeln"/>
+                                    <ExprOp>
+                                        <ConstOp>
+                                            <Type type="string"/>
+                                            <Value value=""/>
+                                        </ConstOp>
+                                    </ExprOp>
+                                </WriteStat>
+                            </Statement>
+                        </Body>
+                    </ForStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="messaggio"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <MainOp>
+        <FunDeclOp>
+            <Identifier id="esercizio"/>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <Identifier id="x"/>
+                    </IdInitOp>
+                    <IdInitOp>
+                        <Identifier id="a"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <VarDeclOp>
+                    <Type type="real"/>
+                    <IdInitOp>
+                        <Identifier id="b"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <VarDeclOp>
+                    <Type type="string"/>
+                    <IdInitOp>
+                        <Identifier id="taglia"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <VarDeclOp>
+                    <VAR/>
+                    <AssignStat>
+                        <Identifier id="ans"/>
+                        <ConstOp>
+                            <Type type="integer"/>
+                            <Value value="0"/>
+                        </ConstOp>
+                    </AssignStat>
+                </VarDeclOp>
+                <VarDeclOp>
+                    <Type type="real"/>
+                    <IdInitOp>
+                        <Identifier id="risultato"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <VarDeclOp>
+                    <VAR/>
+                    <AssignStat>
+                        <Identifier id="c"/>
+                        <ConstOp>
+                            <Type type="integer"/>
+                            <Value value="2"/>
+                        </ConstOp>
+                    </AssignStat>
+                </VarDeclOp>
+                <Statement>
+                    <AssignStat>
+                        <Identifier id="x"/>
+                        <Identifier id="b"/>
+                        <Identifier id="a"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="integer"/>
+                                <Value value="1"/>
+                            </ConstOp>
+                        </ExprOp>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="real"/>
+                                <Value value="2.2"/>
+                            </ConstOp>
+                        </ExprOp>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="integer"/>
+                                <Value value="3"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </AssignStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="c"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <AssignStat>
+                        <Identifier id="risultato"/>
+                        <ExprOp>
+                            <FunCallOp>
+                                <Identifier id="sommac"/>
+                                <ExprOp>
+                                    <Identifier id="a"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <Identifier id="x"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <Identifier id="b"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <Identifier id="taglia"/>
+                                </ExprOp>
+                            </FunCallOp>
+                        </ExprOp>
+                    </AssignStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="stampa"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="la somma  incrementata  è "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </FunCallOp>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="taglia"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="stampa"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value=" ed è pari a "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </FunCallOp>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="risultato"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="vuoi continuare? (1/si 0/no)"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <ReadStat>
+                        <Identifier id="ans"/>
+                    </ReadStat>
+                </Statement>
+                <Statement>
+                    <WhileStat>
+                        <ExprOp>
+                            <Expr typeExpr="EQ">
+                                <ExprOp>
+                                    <Identifier id="ans"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <ConstOp>
+                                        <Type type="integer"/>
+                                        <Value value="1"/>
+                                    </ConstOp>
+                                </ExprOp>
+                            </Expr>
+                        </ExprOp>
+                        <Body>
+                            <Statement>
+                                <ReadStat>
+                                    <Identifier id="a"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="inserisci un intero:"/>
+                                    </ConstOp>
+                                </ReadStat>
+                            </Statement>
+                            <Statement>
+                                <ReadStat>
+                                    <Identifier id="b"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="inserisci un reale:"/>
+                                    </ConstOp>
+                                </ReadStat>
+                            </Statement>
+                            <Statement>
+                                <AssignStat>
+                                    <Identifier id="risultato"/>
+                                    <ExprOp>
+                                        <FunCallOp>
+                                            <Identifier id="sommac"/>
+                                            <ExprOp>
+                                                <Identifier id="a"/>
+                                            </ExprOp>
+                                            <ExprOp>
+                                                <Identifier id="x"/>
+                                            </ExprOp>
+                                            <ExprOp>
+                                                <Identifier id="b"/>
+                                            </ExprOp>
+                                            <ExprOp>
+                                                <Identifier id="taglia"/>
+                                            </ExprOp>
+                                        </FunCallOp>
+                                    </ExprOp>
+                                </AssignStat>
+                            </Statement>
+                            <Statement>
+                                <FunCallOp>
+                                    <Identifier id="stampa"/>
+                                    <ExprOp>
+                                        <ConstOp>
+                                            <Type type="string"/>
+                                            <Value value="la somma  incrementata  è "/>
+                                        </ConstOp>
+                                    </ExprOp>
+                                </FunCallOp>
+                            </Statement>
+                            <Statement>
+                                <WriteStat>
+                                    <WriteMode mode="writeln"/>
+                                    <ExprOp>
+                                        <Identifier id="taglia"/>
+                                    </ExprOp>
+                                </WriteStat>
+                            </Statement>
+                            <Statement>
+                                <FunCallOp>
+                                    <Identifier id="stampa"/>
+                                    <ExprOp>
+                                        <ConstOp>
+                                            <Type type="string"/>
+                                            <Value value=" ed è pari a "/>
+                                        </ConstOp>
+                                    </ExprOp>
+                                </FunCallOp>
+                            </Statement>
+                            <Statement>
+                                <WriteStat>
+                                    <WriteMode mode="writeln"/>
+                                    <ExprOp>
+                                        <Identifier id="risultato"/>
+                                    </ExprOp>
+                                </WriteStat>
+                            </Statement>
+                            <Statement>
+                                <ReadStat>
+                                    <Identifier id="ans"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="vuoi continuare? (1/si 0/no):"/>
+                                    </ConstOp>
+                                </ReadStat>
+                            </Statement>
+                        </Body>
+                    </WhileStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value=""/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="write"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="ciao"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </MainOp>
+</ProgramOp>

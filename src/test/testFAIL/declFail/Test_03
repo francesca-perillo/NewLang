@@ -1,0 +1,8 @@
+|*
+uso di una variabile senza che questa venga prima dichiarata
+*|
+
+start: def startFunction () : void
+{
+    d << 5;
+}

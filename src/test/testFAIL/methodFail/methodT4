@@ -1,0 +1,24 @@
+|*
+QUESTO COMMENTO VIENE IGNORATO DALL ANALIZZATORE LESSICALE
+
+methodT3 Testa se viene chiamata una funzione senza che questa sia stata prima dichiarata.
+*|
+
+start: def startFunction () : void
+{
+	viewMenu();
+    esecuzione();
+}
+
+def viewMenu () : void
+{
+    ("Scegli l'operazione aritmetica che vuoi svolgere:") -->!;
+	("2. Addizione") -->!;
+	("3. Sottrazione") -->!;
+	("4. Moltiplicazione") -->!;
+	("5. Divisione") -->!;
+	("6. Elevamento a potenza") -->!;
+	("------------------------------") -->!;
+	("0. Termina") -->!;
+}
+

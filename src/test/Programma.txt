@@ -1,0 +1,184 @@
+start: def startFunction () : void
+{
+    ("_______________________________________________") -->!;
+    (" Benvenuto nel programma di esempio di NewLang.") -->!;
+    ("_______________________________________________") -->!;
+	viewMenu();
+    esecuzione();
+}
+
+def viewMenu () : void
+{
+    ("")-->!;
+    ("")-->!;
+    ("Scegli l'operazione aritmetica che vuoi svolgere:") -->!;
+    ("------------------------------") -->!;
+
+	("2. Addizione") -->!;
+	("3. Sottrazione") -->!;
+	("4. Moltiplicazione usando la somma") -->!;
+	("5. Divisione intera fra due numeri positivi") -->!;
+	("6. Elevamento a potenza") -->!;
+	("7. Successione di Fibonacci") -->!;
+	("------------------------------") -->!;
+	("0. Termina") -->!;
+}
+
+def esecuzione () : void
+{
+    integer scelta, numero1, numero2;
+
+    scelta <-- "Inserisci un numero da 0 a 7 per continuare:  ";
+
+    if scelta = 0 then
+    {
+        return;
+    } else
+    {
+
+        if scelta>0 and scelta<7 then{
+            numero1 <-- "Inserisci primo operando:  ";
+            numero2 <-- "Inserisci secondo operando:  ";
+        } else {
+            numero1 <-- "Inserisci un numero intero per continuare:  ";
+        }
+
+        if scelta = 2 then
+        {
+            somma(numero1, numero2);
+        } else
+        {
+            if scelta = 3 then
+            {
+                sottrazione(numero1, numero2);
+            } else
+            {
+                if scelta = 4 then
+                {
+                    moltiplicazione(numero1, numero2);
+                } else
+                {
+                    if scelta = 5 then
+                    {
+                       divisione(numero1, numero2);
+                    } else
+                    {
+                        if scelta = 6 then
+                        {
+                            potenza(numero1, numero2);
+                        } else
+                        {
+                            if scelta = 7 then
+                            {
+                                fibonacci(numero1);
+                            } else
+                                {
+                                if scelta = 1 then
+                                {
+                                    restart();
+                                } else
+                                {
+                                    ("Il numero inserito è errato.") -->!;
+                                    restart();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+def fibonacci(integer num) : integer
+{
+    integer a, b, next;
+    a<<0;
+    b<<1;
+    next<<0;
+
+    while next <= num loop{
+        a << b;
+        b << next;
+        next << a+b;
+    }
+
+    ("Il risultato è: ") -->;
+    (next) -->!;
+    restart();
+    return 0;
+}
+
+def restart() : void
+{
+    integer sceltaRestart;
+    sceltaRestart <-- "Premi 1 per tornare al menù principale o 0 per terminare.";
+
+    if sceltaRestart = 1 then
+    {
+        viewMenu();
+        esecuzione();
+    } else
+    {
+        if sceltaRestart = 0 then
+        {
+            return;
+        } else {
+            ("Scelta non valida, riprova!")-->!;
+            restart();
+        }
+    }
+}
+
+def somma (integer operando1 | integer operando2) : void
+{
+    float risultatoSomma << operando1 + operando2;
+    ("Il risultato è: ") -->;
+    (risultatoSomma) -->!;
+
+    restart();
+}
+
+def sottrazione (integer operando1, operando2) : void
+{
+    float risultatoSottrazione << operando1 - operando2;
+    ("Il risultato è: ") -->;
+    (risultatoSottrazione) -->!;
+
+    restart();
+}
+
+def moltiplicazione (integer operando1, operando2) : void
+{
+
+    float risultato << 0;
+    ("Il risultato è: ") -->;
+
+    while operando1!=0 loop {
+        risultato << risultato + operando2;
+        operando1 << operando1-1;
+    }
+
+    (risultato) -->!;
+    restart();
+}
+
+def divisione (integer operando1, operando2) : void
+{
+    float risultato << operando1 / operando2;
+    ("Il risultato è: ") -->;
+    (risultato) -->!;
+
+    restart();
+}
+
+def potenza (integer operando1, operando2) : void
+{
+    float risultato << operando1 ^ operando2;
+    ("Il risultato è: ") -->;
+    (risultato) -->!;
+
+    restart();
+}
+
+

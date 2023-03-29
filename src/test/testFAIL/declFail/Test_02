@@ -1,0 +1,9 @@
+|*
+errore di compatibilità fra tipi NON in riga
+*|
+
+start: def startFunction () : void
+{
+    string d;
+    d << 5;
+}

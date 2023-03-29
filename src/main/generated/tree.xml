@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProgramOp>
+    <MainOp>
+        <FunDeclOp>
+            <Identifier id="startFunction"/>
+            <Type type="voidType"/>
+            <Body>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="viewMenu"/>
+                    </FunCallOp>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="esecuzione"/>
+                    </FunCallOp>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </MainOp>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="viewMenu"/>
+            <Type type="voidType"/>
+            <Body>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="Scegli l'operazione aritmetica che vuoi svolgere:"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="2. Addizione"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="3. Sottrazione"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="4. Moltiplicazione"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="5. Divisione"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="6. Elevamento a potenza"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="------------------------------"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="0. Termina"/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="esecuzione"/>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <Identifier id="numero2"/>
+                    </IdInitOp>
+                    <IdInitOp>
+                        <Identifier id="scelta"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <ReadStat>
+                        <Identifier id="scelta"/>
+                        <ConstOp>
+                            <Type type="string"/>
+                            <Value value="Inserisci un numero da 0 a 6 per continuare"/>
+                        </ConstOp>
+                    </ReadStat>
+                </Statement>
+                <Statement>
+                    <IfStat>
+                        <ExprOp>
+                            <Expr typeExpr="EQ">
+                                <ExprOp>
+                                    <Identifier id="scelta"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <ConstOp>
+                                        <Type type="integer"/>
+                                        <Value value="0"/>
+                                    </ConstOp>
+                                </ExprOp>
+                            </Expr>
+                        </ExprOp>
+                        <Body>
+                            <ReturnOp/>
+                        </Body>
+                        <Body>
+                            <Statement>
+                                <ReadStat>
+                                    <Identifier id="numero1"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="Inserisci primo operando:"/>
+                                    </ConstOp>
+                                </ReadStat>
+                            </Statement>
+                            <Statement>
+                                <ReadStat>
+                                    <Identifier id="numero2"/>
+                                    <ConstOp>
+                                        <Type type="string"/>
+                                        <Value value="Inserisci secondo operando:"/>
+                                    </ConstOp>
+                                </ReadStat>
+                            </Statement>
+                            <Statement>
+                                <IfStat>
+                                    <ExprOp>
+                                        <Expr typeExpr="EQ">
+                                            <ExprOp>
+                                                <Identifier id="scelta"/>
+                                            </ExprOp>
+                                            <ExprOp>
+                                                <ConstOp>
+                                                    <Type type="integer"/>
+                                                    <Value value="2"/>
+                                                </ConstOp>
+                                            </ExprOp>
+                                        </Expr>
+                                    </ExprOp>
+                                    <Body>
+                                        <Statement>
+                                            <FunCallOp>
+                                                <Identifier id="somma"/>
+                                                <ExprOp>
+                                                    <Identifier id="numero1"/>
+                                                </ExprOp>
+                                                <ExprOp>
+                                                    <Identifier id="numero2"/>
+                                                </ExprOp>
+                                            </FunCallOp>
+                                        </Statement>
+                                    </Body>
+                                    <Body>
+                                        <Statement>
+                                            <IfStat>
+                                                <ExprOp>
+                                                    <Expr typeExpr="EQ">
+                                                        <ExprOp>
+                                                            <Identifier id="scelta"/>
+                                                        </ExprOp>
+                                                        <ExprOp>
+                                                            <ConstOp>
+                                                                <Type type="integer"/>
+                                                                <Value value="3"/>
+                                                            </ConstOp>
+                                                        </ExprOp>
+                                                    </Expr>
+                                                </ExprOp>
+                                                <Body>
+                                                    <Statement>
+                                                        <FunCallOp>
+                                                            <Identifier id="sottrazione"/>
+                                                            <ExprOp>
+                                                                <Identifier id="numero1"/>
+                                                            </ExprOp>
+                                                            <ExprOp>
+                                                                <Identifier id="numero2"/>
+                                                            </ExprOp>
+                                                        </FunCallOp>
+                                                    </Statement>
+                                                </Body>
+                                                <Body>
+                                                    <Statement>
+                                                        <IfStat>
+                                                            <ExprOp>
+                                                                <Expr typeExpr="EQ">
+                                                                    <ExprOp>
+                                                                        <Identifier id="scelta"/>
+                                                                    </ExprOp>
+                                                                    <ExprOp>
+                                                                        <ConstOp>
+                                                                            <Type type="integer"/>
+                                                                            <Value value="4"/>
+                                                                        </ConstOp>
+                                                                    </ExprOp>
+                                                                </Expr>
+                                                            </ExprOp>
+                                                            <Body>
+                                                                <Statement>
+                                                                    <FunCallOp>
+                                                                        <Identifier id="moltiplicazione"/>
+                                                                        <ExprOp>
+                                                                            <Identifier id="numero1"/>
+                                                                        </ExprOp>
+                                                                        <ExprOp>
+                                                                            <Identifier id="numero2"/>
+                                                                        </ExprOp>
+                                                                    </FunCallOp>
+                                                                </Statement>
+                                                            </Body>
+                                                            <Body>
+                                                                <Statement>
+                                                                    <IfStat>
+                                                                        <ExprOp>
+                                                                            <Expr typeExpr="EQ">
+                                                                                <ExprOp>
+                                                                                    <Identifier id="scelta"/>
+                                                                                </ExprOp>
+                                                                                <ExprOp>
+                                                                                    <ConstOp>
+                                                                                        <Type type="integer"/>
+                                                                                        <Value value="5"/>
+                                                                                    </ConstOp>
+                                                                                </ExprOp>
+                                                                            </Expr>
+                                                                        </ExprOp>
+                                                                        <Body>
+                                                                            <Statement>
+                                                                                <FunCallOp>
+                                                                                    <Identifier id="divisione"/>
+                                                                                    <ExprOp>
+                                                                                        <Identifier id="numero1"/>
+                                                                                    </ExprOp>
+                                                                                    <ExprOp>
+                                                                                        <Identifier id="numero2"/>
+                                                                                    </ExprOp>
+                                                                                </FunCallOp>
+                                                                            </Statement>
+                                                                        </Body>
+                                                                        <Body>
+                                                                            <Statement>
+                                                                                <IfStat>
+                                                                                    <ExprOp>
+                                                                                        <Expr typeExpr="EQ">
+                                                                                            <ExprOp>
+                                                                                                <Identifier id="scelta"/>
+                                                                                            </ExprOp>
+                                                                                            <ExprOp>
+                                                                                                <ConstOp>
+                                                                                                    <Type type="integer"/>
+                                                                                                    <Value value="6"/>
+                                                                                                </ConstOp>
+                                                                                            </ExprOp>
+                                                                                        </Expr>
+                                                                                    </ExprOp>
+                                                                                    <Body>
+                                                                                        <Statement>
+                                                                                            <FunCallOp>
+                                                                                                <Identifier id="potenza"/>
+                                                                                                <ExprOp>
+                                                                                                    <Identifier id="numero1"/>
+                                                                                                </ExprOp>
+                                                                                                <ExprOp>
+                                                                                                    <Identifier id="numero2"/>
+                                                                                                </ExprOp>
+                                                                                            </FunCallOp>
+                                                                                        </Statement>
+                                                                                    </Body>
+                                                                                    <Body>
+                                                                                        <Statement>
+                                                                                            <IfStat>
+                                                                                                <ExprOp>
+                                                                                                    <Expr typeExpr="EQ">
+                                                                                                        <ExprOp>
+                                                                                                            <Identifier id="scelta"/>
+                                                                                                        </ExprOp>
+                                                                                                        <ExprOp>
+                                                                                                            <ConstOp>
+                                                                                                                <Type type="integer"/>
+                                                                                                                <Value value="1"/>
+                                                                                                            </ConstOp>
+                                                                                                        </ExprOp>
+                                                                                                    </Expr>
+                                                                                                </ExprOp>
+                                                                                                <Body>
+                                                                                                    <Statement>
+                                                                                                        <FunCallOp>
+                                                                                                            <Identifier id="restart"/>
+                                                                                                        </FunCallOp>
+                                                                                                    </Statement>
+                                                                                                </Body>
+                                                                                                <Body>
+                                                                                                    <Statement>
+                                                                                                        <WriteStat>
+                                                                                                            <WriteMode mode="writeln"/>
+                                                                                                            <ExprOp>
+                                                                                                                <ConstOp>
+                                                                                                                    <Type type="string"/>
+                                                                                                                    <Value value="Il numero inserito è errato."/>
+                                                                                                                </ConstOp>
+                                                                                                            </ExprOp>
+                                                                                                        </WriteStat>
+                                                                                                    </Statement>
+                                                                                                </Body>
+                                                                                            </IfStat>
+                                                                                        </Statement>
+                                                                                    </Body>
+                                                                                </IfStat>
+                                                                            </Statement>
+                                                                        </Body>
+                                                                    </IfStat>
+                                                                </Statement>
+                                                            </Body>
+                                                        </IfStat>
+                                                    </Statement>
+                                                </Body>
+                                            </IfStat>
+                                        </Statement>
+                                    </Body>
+                                </IfStat>
+                            </Statement>
+                        </Body>
+                    </IfStat>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="restart"/>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <Identifier id="sceltaRestart"/>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <ReadStat>
+                        <Identifier id="sceltaRestart"/>
+                        <ConstOp>
+                            <Type type="string"/>
+                            <Value value="Premi 1 per tornare al menù principale o 0 per terminare."/>
+                        </ConstOp>
+                    </ReadStat>
+                </Statement>
+                <Statement>
+                    <IfStat>
+                        <ExprOp>
+                            <Expr typeExpr="EQ">
+                                <ExprOp>
+                                    <Identifier id="sceltaRestart"/>
+                                </ExprOp>
+                                <ExprOp>
+                                    <ConstOp>
+                                        <Type type="integer"/>
+                                        <Value value="1"/>
+                                    </ConstOp>
+                                </ExprOp>
+                            </Expr>
+                        </ExprOp>
+                        <Body>
+                            <Statement>
+                                <FunCallOp>
+                                    <Identifier id="viewMenu"/>
+                                </FunCallOp>
+                            </Statement>
+                            <Statement>
+                                <FunCallOp>
+                                    <Identifier id="esecuzione"/>
+                                </FunCallOp>
+                            </Statement>
+                        </Body>
+                        <Body>
+                            <Statement>
+                                <IfStat>
+                                    <ExprOp>
+                                        <Expr typeExpr="EQ">
+                                            <ExprOp>
+                                                <Identifier id="sceltaRestart"/>
+                                            </ExprOp>
+                                            <ExprOp>
+                                                <ConstOp>
+                                                    <Type type="integer"/>
+                                                    <Value value="0"/>
+                                                </ConstOp>
+                                            </ExprOp>
+                                        </Expr>
+                                    </ExprOp>
+                                    <Body>
+                                        <ReturnOp/>
+                                    </Body>
+                                </IfStat>
+                            </Statement>
+                        </Body>
+                    </IfStat>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="somma"/>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="operando2"/>
+            </ParDeclOp>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="operando1"/>
+            </ParDeclOp>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <AssignStat>
+                            <Identifier id="risultatoSomma"/>
+                            <ExprOp>
+                                <Expr typeExpr="PLUS">
+                                    <ExprOp>
+                                        <Identifier id="operando1"/>
+                                    </ExprOp>
+                                    <ExprOp>
+                                        <Identifier id="operando2"/>
+                                    </ExprOp>
+                                </Expr>
+                            </ExprOp>
+                        </AssignStat>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="write"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="Il risultato è: "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="risultatoSomma"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="restart"/>
+                    </FunCallOp>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="sottrazione"/>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="operando2"/>
+                <Identifier id="operando1"/>
+            </ParDeclOp>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <AssignStat>
+                            <Identifier id="risultatoSottrazione"/>
+                            <ExprOp>
+                                <Expr typeExpr="-">
+                                    <ExprOp>
+                                        <Identifier id="operando1"/>
+                                    </ExprOp>
+                                    <ExprOp>
+                                        <Identifier id="operando2"/>
+                                    </ExprOp>
+                                </Expr>
+                            </ExprOp>
+                        </AssignStat>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="write"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="Il risultato è: "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="risultatoSottrazione"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="restart"/>
+                    </FunCallOp>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="moltiplicazione"/>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="operando2"/>
+                <Identifier id="operando1"/>
+            </ParDeclOp>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <AssignStat>
+                            <Identifier id="risultato"/>
+                            <ExprOp>
+                                <Expr typeExpr="TIMES">
+                                    <ExprOp>
+                                        <Identifier id="operando1"/>
+                                    </ExprOp>
+                                    <ExprOp>
+                                        <Identifier id="operando2"/>
+                                    </ExprOp>
+                                </Expr>
+                            </ExprOp>
+                        </AssignStat>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="write"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="Il risultato è: "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="risultatoMoltiplicazione"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="restart"/>
+                    </FunCallOp>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="divisione"/>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="operando2"/>
+                <Identifier id="operando1"/>
+            </ParDeclOp>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <AssignStat>
+                            <Identifier id="risultato"/>
+                            <ExprOp>
+                                <Expr typeExpr="DIV">
+                                    <ExprOp>
+                                        <Identifier id="operando1"/>
+                                    </ExprOp>
+                                    <ExprOp>
+                                        <Identifier id="operando2"/>
+                                    </ExprOp>
+                                </Expr>
+                            </ExprOp>
+                        </AssignStat>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="write"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="Il risultato è: "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="risultatoDivisione"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="restart"/>
+                    </FunCallOp>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+    <DeclList>
+        <FunDeclOp>
+            <Identifier id="potenza"/>
+            <ParDeclOp>
+                <Type type="integer"/>
+                <Identifier id="operando2"/>
+                <Identifier id="operando1"/>
+            </ParDeclOp>
+            <Type type="voidType"/>
+            <Body>
+                <VarDeclOp>
+                    <Type type="integer"/>
+                    <IdInitOp>
+                        <AssignStat>
+                            <Identifier id="risultato"/>
+                            <ExprOp>
+                                <Expr typeExpr="POW">
+                                    <ExprOp>
+                                        <Identifier id="operando1"/>
+                                    </ExprOp>
+                                    <ExprOp>
+                                        <Identifier id="operando2"/>
+                                    </ExprOp>
+                                </Expr>
+                            </ExprOp>
+                        </AssignStat>
+                    </IdInitOp>
+                </VarDeclOp>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="write"/>
+                        <ExprOp>
+                            <ConstOp>
+                                <Type type="string"/>
+                                <Value value="Il risultato è: "/>
+                            </ConstOp>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <WriteStat>
+                        <WriteMode mode="writeln"/>
+                        <ExprOp>
+                            <Identifier id="risultatoPotenza"/>
+                        </ExprOp>
+                    </WriteStat>
+                </Statement>
+                <Statement>
+                    <FunCallOp>
+                        <Identifier id="restart"/>
+                    </FunCallOp>
+                </Statement>
+            </Body>
+        </FunDeclOp>
+    </DeclList>
+</ProgramOp>

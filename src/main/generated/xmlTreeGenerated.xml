@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProgramOp>
+    <DeclList>
+        <VarDeclOp>
+            <Type type="real"/>
+            <IdInitOp>
+                <Identifier id="pippo"/>
+            </IdInitOp>
+        </VarDeclOp>
+    </DeclList>
+    <MainOp>
+        <FunDeclOp>
+            <Identifier id="prova"/>
+            <Type type="voidType"/>
+            <Body/>
+        </FunDeclOp>
+    </MainOp>
+</ProgramOp>
